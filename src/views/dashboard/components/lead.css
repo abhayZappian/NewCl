@@ -1,0 +1,20 @@
+.dashboard-grid {
+    height: 80px;
+    width: 210px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    color: white;
+    border-radius: 10px;
+    padding: 25px;
+}
+.dashboard-card {
+    padding-top: 10px;
+    display: flex;
+    width: 48%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+}

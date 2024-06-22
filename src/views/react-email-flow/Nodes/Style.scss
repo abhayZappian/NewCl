@@ -1,0 +1,153 @@
+.NodeWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // border: 2px solid red;
+  // position: relative;
+}
+
+.NodeInnerWrapper {
+  position: relative; 
+  display: flex;
+  border: 1px solid #0987f5;
+  // border: 2px solid black;
+
+  padding: 8px 40px;
+  border-radius: 6px;
+  background-color: #fff;
+  .icon_design {
+    height: 34px;
+    width: 34px;
+    margin-left: -61px;
+    margin-top: 1px;
+    color: #0987f5;
+    background-color: #fff;
+  }
+  .node_delete_icon {
+    position: absolute;
+    top: -18%;
+    left: 94.5% !important;
+  }
+  .node_info {
+    margin-left: 10px;
+    // border: 2px solid green;
+
+    .NodeTitle {
+      color: #000;
+      font-size: 16px;
+      text-transform: upppercase;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .NodeDesc {
+      padding-left: 5px;
+      margin: 0;
+    }
+  }
+
+  &[aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+
+  &:not([aria-disabled="true"]):hover {
+    // box-shadow: var(--elevation-z2);
+  }
+
+  &:not([aria-disabled="true"])[data-selected="true"] {
+    // box-shadow: inset 0px 0px 0px 1px currentColor, var(--elevation-z3);
+  }
+  &.ConditionNode {
+    // width: 350px;
+  }
+  > .closeIcon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    > svg {
+      color: red;
+    }
+  }
+}
+
+.EmptyNodeInnerWrapper {
+  width: 1px;
+  height: 1px;
+  background-color: var(--edges-stroke-color);
+}
+
+.NodeContent {
+  display: flex;
+  flex-direction: column;
+  // background-color: red;
+}
+
+.NodeIcon {
+  font-size: 18px;
+  padding: 4px;
+}
+
+.NodeTitle {
+  // color: var(--color-base900);
+  color: #000;
+  font-size: 14px;
+  text-transform: upppercase;
+  font-weight: bold;
+}
+
+.NodeDesc {
+  // color: var(--color-base700);
+  color: #383535;
+  font-size: 12px;
+}
+
+.NodePort {
+  &.react-flow__handle {
+    border: 0;
+    background-color: var(--edges-stroke-color);
+    opacity: 1;
+    position: relative;
+    left: -0%;
+  }
+}
+.handleWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 15vw;
+  opacity: 0;
+  margin-top: 1%;
+
+  .handleNodes {
+    position: relative;
+    white-space: nowrap;
+    width: 25vw;
+    height: 24px;
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    .handleActionNodes {
+      position: absolute;
+      margin-top: 24px;
+      height: 20px;
+      width: 30px;
+      border-radius: 4px;
+      background-color: rgb(0, 119, 255);
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+.NodeWrapper:hover .handleWrapper {
+  display: flex;
+  justify-content: space-between;
+  .NodePort2 {
+    &.react-flow__handle {
+      width: 50px;
+      height: 14px;
+      border-radius: 3px;
+      background-color: rgba(24, 144, 255, 0.8);
+      opacity: 1;
+    }
+  }
+  opacity: 1;
+}
