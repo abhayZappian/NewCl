@@ -1,9 +1,0 @@
-let arr = [0, -1, 21, -3, -1, 2, -4];
-
-for (i = 0; i < arr.length; i++) {
-  for (j = i + 1; j < arr.length; j++) {
-    if (arr[i] + arr[j] == 2) {
-      console.log("repeating no's are ", arr[i], arr[j]);
-    }
-  }
-}
